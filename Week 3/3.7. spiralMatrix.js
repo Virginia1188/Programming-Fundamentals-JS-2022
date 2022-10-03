@@ -4,7 +4,7 @@ function solve(firstNum, secondNum){
 
     for(let i = 0; i < firstNum; i++){
         for(j=0; j <firstNum; j++){
-            spiralArr[i] += [j +1];
+            spiralArr[i] = j +1;
         }
     }
     //for(let i = 0; i < firstNum; i++)
