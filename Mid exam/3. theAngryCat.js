@@ -7,13 +7,13 @@ function theAngryCat(arrOfPrice, entryPoint, type) {
         case "cheap":
             for (let l = 0; l < entryPoint; l++) {
                 let currentLeft = arrOfPrice[l];
-                if(currentLeft < entryEl){
+                if (currentLeft < entryEl) {
                     leftSum += currentLeft;
                 }
             }
-            for (let j = entryPoint +1; j < arrOfPrice.length; j++) {
+            for (let j = entryPoint + 1; j < arrOfPrice.length; j++) {
                 let currentRight = arrOfPrice[j];
-                if(currentRight < entryEl){
+                if (currentRight < entryEl) {
                     rightSum += currentRight;
                 }
             }
@@ -21,28 +21,26 @@ function theAngryCat(arrOfPrice, entryPoint, type) {
         case "expensive":
             for (let l = 0; l < entryPoint; l++) {
                 let currentLeft = arrOfPrice[l];
-                if(currentLeft >= entryEl){
+                if (currentLeft >= entryEl) {
                     leftSum += currentLeft;
                 }
             }
-            for (let j = entryPoint +1; j < arrOfPrice.length; j++) {
+            for (let j = entryPoint + 1; j < arrOfPrice.length; j++) {
                 let currentRight = arrOfPrice[j];
-                if(currentRight >= entryEl){
+                if (currentRight >= entryEl) {
                     rightSum += currentRight;
                 }
             }
             break;
     }
-    if(rightSum > leftSum){
+    if (rightSum > leftSum) {
         console.log(`Right - ${rightSum}`);
-    }else{
+    } else {
         console.log(`Left - ${leftSum}`);
     }
-    
-
 }
 theAngryCat([-2, 2, 1, 5, 9, 3, 2, -2, 1, -1, -3, 3],
     7,
     "expensive")
-    
+
     ;
